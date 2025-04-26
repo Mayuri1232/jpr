@@ -4,7 +4,7 @@ public static void main(String args[])
 {
 //Integer Wrapper class
 int i=20;
-int l=120001;
+long l=120001;
 Integer i1=new Integer(i);
 Long l1=new Long(l);
 int i2=i1.intValue();
