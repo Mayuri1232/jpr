@@ -1,25 +1,38 @@
-import java.awt.*;
 import java.awt.event.*;
-class MouseEventEx implements MouseMotionListener
+import java.awt.*;
+class mousee implements MouseListener
 {
 Frame f;
-public MouseEventEx()
+public mousee()
 {
 f=new Frame();
 f.setSize(500,500);
 f.setVisible(true);
-f.addMouseMotionListener(this);
+f.addMouseListener(this);
 }
-public void mouseMoved(MouseEvent e)
+public void mousePressed(MouseEvent e)
 {
 f.setBackground(Color.red);
 }
-public void mouseDragged(MouseEvent e)
+public void mouseClicked(MouseEvent e)
 {
 f.setBackground(Color.yellow);
 }
+public void mouseReleased(MouseEvent e)
+{
+f.setBackground(Color.black);
+}
+
+public void mouseEntered(MouseEvent e)
+{
+f.setBackground(Color.pink);
+}
+public void mouseExited(MouseEvent e)
+{
+f.setBackground(Color.orange);
+}
 public static void main(String args[])
 {
-new MouseEventEx();
+new mousee();
 }
 }
