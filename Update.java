@@ -15,6 +15,9 @@ System.out.println("Connection esablished.........");
 Statement s1=con.createStatement();
 s1.executeUpdate("update Stud312 set name='abc' where roll_no='1' ");
 System.out.println("Record Updated");
+Statement s2=con.createStatement();
+s2.executeUpdate("delete from Stud312 where roll_no='1' "); 
+con.close();  
 }
 catch(Exception e)
 {
