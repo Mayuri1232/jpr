@@ -1,14 +1,15 @@
 import java.net.*;
-import java.util.*;
+
 class InetEx
 {
-public static void main(String args[])throws UnknownHostException
+public static void main(String args[]) throws UnknownHostException
 {
-Scanner sc=new Scanner(System.in);
-System.out.println("Enter the Host Name :");
-String Hostnm=sc.nextLine();
-InetAddress ip=InetAddress.getByName(Hostnm);
-System.out.println("Host NAme :"+Hostnm);
+InetAddress ip=InetAddress.getLocalHost();
+  System.out.println(ip);
+ ip=InetAddress.getByName("www.google.com");
+  System.out.println(ip);
+System.out.println("Host NAme :"+ip.getHostName());
 System.out.println("IP Address :"+ip.getHostAddress());
+  
 }
 }
