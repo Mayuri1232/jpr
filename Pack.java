@@ -7,3 +7,5 @@ Demo d =new Demo();
 d.view();
 }
 }
+
+//javac -d .Demo.java
